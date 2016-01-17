@@ -119,11 +119,8 @@ sol = ', '.join([ str(x) for x in sol ])
 print '[*] Solution: {0}'.format(sol)
 sock.send(sol+'\n')
 
-# see response wroing
+# see response
 r = sock.recv(4096)
-if 'Wrong' in r:
-	print r
-elif 'INS' in r:
-	print r
+print r
 
 sock.close()
