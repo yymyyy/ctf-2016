@@ -116,9 +116,8 @@ sol, y = get_common_element(sol_st)
 sol = ', '.join([ str(x) for x in sol ])
 
 # send solution
-solution = sol
-print '[*] Solution: {0}'.format(solution)
-sock.send(solution+'\n')
+print '[*] Solution: {0}'.format(sol)
+sock.send(sol+'\n')
 
 # see response wroing
 r = sock.recv(4096)
