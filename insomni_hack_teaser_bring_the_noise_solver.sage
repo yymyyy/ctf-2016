@@ -1,9 +1,9 @@
-import os
+from collections import defaultdict
 import hashlib
 import itertools
 import string
 import socket
-from subprocess import check_output
+import struct
 
 def md5(s):
 	m = hashlib.md5()
@@ -59,10 +59,6 @@ print '[*] Equation: {0}'.format(equation)
 
 # find solution
 print '[*] Find solution ...'
-from collections import defaultdict
-import itertools
-import struct
-import os
 
 def get_common_element(L):
 	d = defaultdict(int)
@@ -130,8 +126,5 @@ if 'Wrong' in r:
 	print r
 elif 'INS' in r:
 	print r
-
-r = sock.recv(4096)
-print '[*] FLAG: {0}'.format(r)
 
 sock.close()
