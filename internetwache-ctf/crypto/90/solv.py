@@ -1,5 +1,4 @@
 import socket
-import re
 from ct import forge
 
 s = socket.socket()
